@@ -16,31 +16,120 @@
     <link rel="icon" type="image/svg+xml" href="assets/" />
 </head>
 <body>
-    <section class="hero-container">
+    <section id="hero-container">
         <div class="nav">
-            SEMROS
+            <div class = "navi-logo">SEMROS</div>
+            <a href="#content-container" class = "navi-items">
+                About
+            </a>
+            <a href="#team-container" class="navi-items">
+                Team
+            </a>
         </div>
         <div class="hero-main">
-            <div>Smart Evaluator of MRO Supplies</div>
+            <div class="hero-header">Smart Evaluator of MRO Supplies</div>
+            <div class="hero-content">A Data Collection and Vendibility Analysis Tool</div>
         </div>
-
     </section>
 
-    <section class="content-container">
-        <div>[insert finished abstract]</div>
+    <section id="content-container">
+        <div>[insert approved abstract]</div>
     </section>
-    <div>Meet the Team</div>
-    <section class="team-container">
-        <div class="card">Matthew</div>
-        <div class="card">Cohen</div>
-        <div class="card">Carter</div>
-        <div class="card">Dawniqueca</div>
-        <div class="card">Justin</div>
+    <section id="team-container">
+        <div class="team-header">Meet the Team</div>
+        <div class="card">
+            <div class="card-image">
+
+            </div>
+            <div class="card-content">
+                <div class="name">
+                    Matthew Periut
+                </div>
+                <div class="card-info">
+                    Team Lead
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+
+            </div>
+            <div class="card-content">
+                <div class="name">
+                    Cohen Miller
+                </div>
+                <div class="card-info">
+                    [content]
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+
+            </div>
+            <div class="card-content">
+                <div class="name">
+                    Carter Ray
+                </div>
+                <div class="card-info">
+                    [content]
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+
+            </div>
+            <div class="card-content">
+                <div class="name">
+                    Dawniqueca Steele
+                </div>
+                <div class="card-info">
+                    [content]
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+
+            </div>
+            <div class="card-content">
+                <div class="name">
+                    Justin Hughes
+                </div>
+                <div class="card-info">
+                    [content]
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-        &copy; 2024  
+        <a href="#hero-container">▲</a>
     </footer>
-    
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+   
+    </script>
 </body>
 </html>
 
