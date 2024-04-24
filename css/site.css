@@ -6,7 +6,7 @@ html,body
     margin: auto;
     padding: 0px;
     overflow-x: hidden; 
-    font-family: "DM Sans";
+    font-family: "Figtree";
     
 }
 
@@ -47,23 +47,26 @@ a:hover{
 }
 
 #hero-container {
-    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    background-image: url(../assets/vendingdisplay.jpg);
+    /*background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%); */
     background-size: cover;
-    color: #ffffff;
+    background-position: center;
+    color: #f2f9ff;
 
     
 }
 
 
 .hero-main {
-    
     padding:30%;
-    padding-left: 5%;
+    text-align: center;
     padding-top: 15%;
     margin-left: auto;
     margin-right: auto;
     font-family: "Poppins";
-    animation: fade-in 3s ease-in;
+    animation: fade-in 2s ease-out;
+    background: rgba(0, 0, 0, 0.7); 
+    font-size: 20px;
 
 
 }
@@ -71,26 +74,66 @@ a:hover{
 .hero-header {
     flex: 50%;
     font-weight: 700;
-    font-size:50px; 
+    font-size:60px; 
     padding:0;
     margin-bottom: 2%;
 }
 
 #content-container {
-    padding:15%;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
     margin-left: auto;
     margin-right: auto;
     background-color: #cfe4f4;
-    text-align: center;
+    height: auto;
+}
+
+.abstract {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 5%;
+    width: 50%; /* Let the abstract take up available space */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    text-align: center; /* Center the text content */
+}
+
+.content-pic {
+    flex: 50%;
+    margin: 10px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Ensure the image covers the entire container */
+
+}
+
+.pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 25%; 
+
 }
 
 #team-container {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #f2f9ff;
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: nowrap;  
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between cards */ 
+    flex-wrap: nowrap;
+    margin-bottom: 5%;;
+    
 }
 
 .team-header {
@@ -101,40 +144,72 @@ a:hover{
     padding: 5%;
     color: #171717;
 }
+
 .card {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 #d5e4f2;
     background-color: #ffffff;
     transition: 0.3s;
-    width: 50%;
-    padding: 10%;
-    margin-bottom: 10%;
-    display:flex;
-    
+    width: calc(20% - 20px);
+    height: 450px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
 
 .card:hover {
     transform: scale(1.02);
 }
 
-.card-image{
-    flex: 50%;
+.card-image {
+    width: 220px;
+    height: 200px;
+    flex: 60%; 
+    display: flex;
+    justify-content: center; 
+    
 }
+
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center; 
+    border-radius: 8px; 
+}
+
 
 
 .card-content{
     flex: 50%;
+    padding: 10px;
+    text-align: center;
 }
 
 
 .name{
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 30px;
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
 }
 
-.card-info{
-    padding-top: 2%;
+.card-info {
+    margin-top: 10px; 
+    padding-bottom: 20px;
+}
+
+.card-info a img {
+    margin-top: 20px;
+    padding: 10px;
+    height: 35px; 
+    margin-right: 10px; 
+    fill: #242424;
 }
 
 footer{
@@ -159,3 +234,15 @@ footer{
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%; 
+        height: auto;
+    }
+    .card-image {
+        height: 150px; 
+    }
+}
+
+
